@@ -26,6 +26,11 @@ class FastExcel
     private $with_header = true;
 
     /**
+     * @var bool
+     */
+    private $should_format_dates = false;
+
+    /**
      * @var
      */
     private $csv_configuration = [
@@ -94,6 +99,16 @@ class FastExcel
     public function withoutHeaders()
     {
         $this->with_header = false;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function setShouldFormatDates()
+    {
+        $this->should_format_dates = true;
 
         return $this;
     }

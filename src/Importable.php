@@ -91,6 +91,11 @@ trait Importable
     private function reader($path)
     {
         $reader = ReaderFactory::create($this->getType($path));
+
+        if ($this->should_format_dates) {
+            $reader->setShouldFormatDates(true);
+        }
+
         $this->setOptions($reader);
         /* @var \Box\Spout\Reader\ReaderInterface $reader */
         $reader->open($path);
