@@ -1,5 +1,5 @@
 {
-  "name": "webinarinc/fast-excel",
+  "name": "rap2hpoutre/fast-excel",
   "type": "library",
   "keywords": ["laravel", "excel", "csv", "xls", "xlsx"],
   "description": "Fast Excel import/export for Laravel",
